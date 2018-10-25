@@ -1,0 +1,154 @@
+body{
+	margin:0;
+	background:#000;
+}
+
+.wrapper{
+	width:100%; height:100%;
+	position:fixed;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	flex-direction:column;
+	background:#000;
+}
+
+@keyframes glow-outer {
+  from {
+    box-shadow: 0 0 5px #000, 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+  }
+  to {
+    box-shadow: 0 0 2.5px #000,0 0 2.5px #fff, 0 0 5px #fff, 0 0 7.5px #fff, 0 0 10px #FF1177, 0 0 17.5px #FF1177, 0 0 20px #FF1177, 0 0 25px #FF1177, 0 0 37.5px #FF1177;
+  }
+}
+
+@-keyframes glow-inner {
+  from {
+    box-shadow: inset 0 0 5px #000, inset 0 0 5px #fff, inset 0 0 10px #fff, inset 0 0 15px #fff, inset 0 0 20px #FF1177, inset 0 0 35px #FF1177, inset 0 0 40px #FF1177, inset 0 0 50px #FF1177, inset 0 0 75px #FF1177;
+  }
+  to {
+    box-shadow: inset 0 0 2.5px #000, inset 0 0 2.5px #fff, inset 0 0 5px #fff, inset 0 0 7.5px #fff, inset 0 0 10px #FF1177, inset 0 0 17.5px #FF1177, inset 0 0 20px #FF1177, inset 0 0 25px #FF1177, inset 0 0 37.5px #FF1177;
+  }
+}
+
+@-webkit-keyframes glow-outer {
+  from {
+    box-shadow: 0 0 5px #000, 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+  }
+  to {
+    box-shadow: 0 0 2.5px #000,0 0 2.5px #fff, 0 0 5px #fff, 0 0 7.5px #fff, 0 0 10px #FF1177, 0 0 17.5px #FF1177, 0 0 20px #FF1177, 0 0 25px #FF1177, 0 0 37.5px #FF1177;
+  }
+}
+
+@-webkit-keyframes glow-inner {
+  from {
+    box-shadow: inset 0 0 5px #000, inset 0 0 5px #fff, inset 0 0 10px #fff, inset 0 0 15px #fff, inset 0 0 20px #FF1177, inset 0 0 35px #FF1177, inset 0 0 40px #FF1177, inset 0 0 50px #FF1177, inset 0 0 75px #FF1177;
+  }
+  to {
+    box-shadow: inset 0 0 2.5px #000, inset 0 0 2.5px #fff, inset 0 0 5px #fff, inset 0 0 7.5px #fff, inset 0 0 10px #FF1177, inset 0 0 17.5px #FF1177, inset 0 0 20px #FF1177, inset 0 0 25px #FF1177, inset 0 0 37.5px #FF1177;
+  }
+}
+
+.circle-outer{
+	width:300px; height:300px; 
+	border-radius: 50%;
+    position: relative;
+	background-image: linear-gradient(yellow, 10%, white, 35%, white);
+	background-repeat: no-repeat;
+	
+	/* background-color:white;  
+	box-shadow: 0px 0px 10px 5px yellow; */
+	
+	-webkit-animation: glow-outer 2s ease-in-out infinite alternate;
+    -moz-animation: glow-outer 2s ease-in-out infinite alternate;
+    animation: glow-outer 2s ease-in-out infinite alternate;	
+}
+
+.circle-inner{
+	width: 200px; height:200px;
+	background:#000;
+	border-radius: 50%;
+	margin: 50px 0px 0px 50px;
+	
+	/* box-shadow: inset 0px 0px 10px 5px yellow; */
+	-webkit-animation: glow-inner 2s ease-in-out infinite alternate;
+    -moz-animation: glow-inner 2s ease-in-out infinite alternate;
+    animation: glow-inner 2s ease-in-out infinite alternate;
+}
+
+.rectangle-left {
+    position: absolute;
+    margin: 0 auto;
+    top: 150px;
+    left: 75px;
+    background: #FFF;
+    width: 40px;
+    height: 100px;
+    transform: rotate(45deg);
+	z-index:0;
+	/* box-shadow: inset 0px 0px 10px 10px yellow; */
+}
+
+.rectangle-right {
+    position: absolute;
+    margin: 0 auto;
+    top: 150px;
+    left: 180px;
+    background: #FFF;
+    width: 40px;
+    height: 100px;
+    transform: rotate(-45deg);
+	
+	/* box-shadow: inset 0px 0px 10px 10px yellow; */
+}
+
+
+.triangle-left {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-left: 20px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 105px solid #FFF;
+    top: 70px;
+    left: 112px;
+    transform: rotate(13deg);
+	
+	/* box-shadow: inset 0px 0px 10px 10px yellow; */
+
+}
+
+
+.triangle-right {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-left: 20px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 105px solid #FFF;
+    top: 70px;
+    left: 141px;
+    transform: rotate(-10deg);
+	/* box-shadow: inset 0px 0px 10px 10px yellow; */
+}
+
+
+.div-left {
+    position: absolute;
+    width: 50px;
+    height: 10px;
+    top: 60px;
+    left: 33px;
+    background: #000;
+    transform: rotate(45deg);
+	
+
+}
+
+.div-right{
+	position:absolute;
+	width:50px; height:10px;
+	top:60px; left:217px;
+	background:#000;
+	transform: rotate(-45deg);
+}
